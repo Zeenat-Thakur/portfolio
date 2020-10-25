@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Business List</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="/assets/images/icons/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="/assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/business//fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/vendor/animate/animate.css">
+    <link rel="stylesheet" type="text/css" href="/assets/vendor/select2/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/vendor/perfect-scrollbar/perfect-scrollbar.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/util.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/edit.css">
+</head>
+<body>
+
+<div class="limiter">
+    <div class="container-table100">
+        <div class="wrap-table100">
+            <div class="table100">
+                <table>
+                    <thead>
+                    <tr class="table100-head">
+                        <th class="column1">Last Modified</th>
+                        <th class="column2">Name</th>
+                        <th class="column3">Number</th>
+                        <th class="column4">Email</th>
+                        <th class="column5"></th>
+                        <th class="column6"></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <% str.forEach(function (contact) { %>
+                        <tr>
+                            <td class="column1"><%= contact.updatedAt %></td>
+                            <td class="column2"><%= contact.username %></td>
+                            <td class="column3"><%= contact.phone %></td>
+                            <td class="column4"><%= contact.email %></td>
+                            <td class="column5">
+                                <a href="/business/view/<%= contact._id %>">
+                                    <button class="btn btn-primary text-center">
+                                        Edit
+                                    </button>
+                                </a>
+
+                            </td>
+                            <td class="column6">
+                                <a href="/business/view/<%= contact._id %>">
+                                    <button class="btn btn-danger text-center">
+                                        Delete
+                                    </button>
+                                </a>
+                            </td>
+                        </tr>
+                    <%
+                    }) %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="/assets/vendor/jquery/jquery-3.2.1.min.js"></script>
+<script src="/assets/vendor/bootstrap/js/popper.js"></script>
+<script src="/assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="/assets/vendor/select2/select2.min.js"></script>
+<script src="/assets/js/main.js"></script>
+
+</body>
+</html>

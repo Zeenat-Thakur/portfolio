@@ -1,0 +1,4 @@
+- Install nodejs in your machine. download nodejs [here](https://nodejs.org/en/download/)
+- Navigate to the project root directory and open a command prompt/terminal in that directory
+- Past the command *node ./bin/www* in the terminal to start the server.
+- In the browser navigate to http://localhost:3000 to access the site locally.
